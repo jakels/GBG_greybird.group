@@ -1,6 +1,40 @@
-<!DOCTYPE html>
 <html>
     <head>
-        <title>GreyBird Group</title>
+        <style>
+            p {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 100%;
+                filter: drop-shadow(0 0.1rem 2rem rgb(0, 0, 0));
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            body {
+                animation: fadeInAnimation ease 3s;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
+            }
+            
+            @keyframes fadeInAnimation {
+                0% {
+                    filter: blur(10rem);
+                    opacity: 0;
+                }
+                100% {
+                    filter: blur(0rem);
+                    opacity: 1;
+                }
+            }
+        </style>
     </head>
+    <body>
+        <div style="margin-left: 24%; margin-top: 20%;">
+            <img src="unique_assets/images/site_media/site_logo.png" width="72%">
+        </div>
+        <p style="text-align: center;">Looking to get an online presence, talk to us <u><a href="mailto:sales@greybird.group">sales@greybird.group</a></u></p>
+        <p style="text-align: center;">Our clients include; <u><a href="https://sicknslick.co.uk">https://sicknslick.co.uk</a></u>, <u><a href="https://leedsuni.party">https://leedsuni.party</a></u></p>
+    </body>
 </html>
