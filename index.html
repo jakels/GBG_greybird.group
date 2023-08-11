@@ -13,21 +13,51 @@
 
         <title>Greybird Group</title>
         <link rel="icon" type="image/x-icon" href="/unique_assets/images/core/ico.png">
+        <link href="/bootstrap_assets/dist/css/bootstrap.min.css" rel="stylesheet">
         <style>
+            @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+            html{
+                background-color: black;
+                overflow-x: hidden;
+            }
+            body{
+                margin: 0 0 0 0;
+            }
+            
+            h1{
+                font-family: 'Raleway', sans-serif;
+            }
+            
             p {
                 font-family: Arial, Helvetica, sans-serif;
                 font-size: 100%;
-                filter: drop-shadow(0 0.1rem 2rem rgb(0, 0, 0));
+                /*filter: drop-shadow(0 0.1rem 2rem rgb(0, 0, 0));*/
+            }
+            
+            .drop_shadow_white {
+                filter: drop-shadow(0 0.5rem 2rem rgb(255, 255, 255));                
             }
 
+            .drop_shadow_black {
+                filter: drop-shadow(0 0.5rem 2rem rgb(0, 0, 0));
+            }
+
+            .up_shadow_black {
+                filter: drop-shadow(0 -0.5rem 2rem rgb(0, 0, 0));
+            }
+            
+            .both_shadow_black{
+                filter: drop-shadow(0 0.5rem 2rem rgb(0, 0, 0)) drop-shadow(0 -0.5rem 2rem rgb(0, 0, 0));
+            }
+            
             a {
                 text-decoration: none;
                 color: black;
             }
 
             body {
-                animation: fadeInAnimation ease 3s;
-                animation-iteration-count: 1;
+                animation: fadeInAnimation ease 0s; /* If debug change to 0 */
+                animation-iteration-count: 1; 
                 animation-fill-mode: forwards;
             }
             
@@ -41,14 +71,128 @@
                     opacity: 1;
                 }
             }
+
+            .centered_div {
+                display: flex;
+                justify-content: center;
+            }
+            
+            .padded_div{
+                padding-left: 12%;
+                padding-right: 12%;
+            }
+            
+            .animated_arrow{
+                animation: animated_arrow_animation ease-in-out 2s;
+                animation-iteration-count: infinite;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes animated_arrow_animation {
+                0% {
+                    opacity: 0;
+                    transform: translate(0%, 0%);
+                }
+                50% {
+                    opacity: 1;
+                    transform: translate(0%, 5%);
+                }
+                100% {
+                    opacity: 0;
+                    transform: translate(0%, 0%);
+                }
+            }
+
+            .flex-container {
+                /* We first create a flex layout context */
+                display: flex;
+
+                /* Then we define the flow direction 
+                    and if we allow the items to wrap 
+                * Remember this is the same as:
+                * flex-direction: row;
+                * flex-wrap: wrap;
+                */
+                flex-flow: row wrap;
+
+                /* Then we define how is distributed the remaining space */
+                justify-content: left;
+            }
+
+            .animated_logo{
+                animation: animated_logo_animation ease-in-out 2s;
+                animation-iteration-count: infinite;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes animated_logo_animation {
+                0% {
+                    opacity: 0.9;
+                }
+                50% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0.9;
+                }
+            }
         </style>
     </head>
     <body>
-        <div style="margin-left: 24%; margin-top: 20%;">
-            <img src="unique_assets/images/site_media/site_logo.png" width="72%">
+        <div style="z-index: 999; position: fixed; height: 2%; background-color: black; padding: 1% 1% 1% 1%;">
+            <p style="color: white;">
+                <a href="index.html" style="color: white;">Home</a>
+                <span style="color:black; user-select: none;">__</span>
+                <a href="index.html" style="color: white;">Clients</a>
+                <span style="color:black; user-select: none;">__</span>
+                <a href="index.html" style="color: white;">Contact</a>
+                <span style="color:black; user-select: none;">__</span>
+                <a href="index.html" style="color: white;">Pricing</a>
+            </p>
         </div>
-        <p style="text-align: center;">Looking to get an online presence, talk to us <u><a href="mailto:sales@greybird.group">sales@greybird.group</a></u></p>
-        <p style="text-align: center;">Our clients include; <u><a href="https://sicknslick.co.uk">https://sicknslick.co.uk</a></u>, <u><a href="https://leedsuni.party">https://leedsuni.party</a></u></p>
+    
+        <div style="width:100vw; height: 100vh; background-color: black;" class="drop_shadow_black">
+            <img src="/unique_assets/images/site_media/site_logo.png" style="width: 60%; margin-left: 20%; margin-top: 35vh;" class="drop_shadow_white animated_logo">
+            <p style="text-align: center; color: white;" class="drop_shadow_white">The Leeds based web developers and managers.</p>
+            <div style="text-align: center">
+                <a href="#display_one">
+                    <img src="unique_assets/images/site_media/arrow.png" style="width: 3%;" class="drop_shadow_white animated_arrow">
+                </a>
+            </div>
+        </div>
+        <div id="display_one"></div>
+        <br><br><br><br>
+        
+        <div style="background-color: white" class="padded_div">
+            <br><br><br>
+            <div class="flex-container">
+                <div style="width: 47rem; padding-left: 1rem; padding-right: 1rem;">
+                    <p style="margin-top: 9rem;">
+                        <span style="font-size: 300%; line-height: 120%;">You're reading a nice and slick <span style="color: grey;">heading</span>, right now.</span><br>
+                        <span style="font-size: 120%;">You don't need to pay thousands for a beautiful website. Contact us at sales@greybird.group and we can give you a quote over email.</span>
+                    </p>
+                </div>
+                
+                <img src="unique_assets/images/core/placeholder_512x512.png" style="width: 34rem;">
+            </div>
+            
+
+            <br><br><br><br>
+            <br><br><br><br>
+            <br><br><br><br>
+            <div class="flex-container" style="flex-direction: row-reverse;">
+                <div style="width: 47rem; padding-left: 1rem; padding-right: 1rem;">
+                    <p style="margin-top: 9rem;">
+                        <span style="font-size: 300%; line-height: 120%;">You're reading a nice test <span style="color: grey;">heading</span>, right now.</span><br>
+                        <span style="font-size: 120%;">You don't need to pay thousands for a beautiful website. Contact us at sales@greybird.group and we can give you a quote over email.</span>
+                    </p>
+                </div>
+                
+                <img src="unique_assets/images/core/placeholder_512x512.png" style="width: 34rem;">
+            </div>
+            <br><br><br><br>
+        </div>
+        
         <script>
             try{
                 var xmlHttp = new XMLHttpRequest();
