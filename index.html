@@ -113,6 +113,7 @@
                 * flex-direction: row;
                 * flex-wrap: wrap;
                 */
+
                 flex-flow: row wrap;
 
                 /* Then we define how is distributed the remaining space */
@@ -127,27 +128,46 @@
 
             @keyframes animated_logo_animation {
                 0% {
-                    opacity: 0.9;
+                    opacity: 0.95;
+                    filter: drop-shadow(0 0.5rem 2rem rgb(255, 255, 255));
                 }
                 50% {
+                    transform: translateY(-0.1rem);
                     opacity: 1;
+                    filter: drop-shadow(0 0.6rem 2rem rgb(255, 255, 255));
+
                 }
                 100% {
-                    opacity: 0.9;
+                    opacity: 0.95;
+                    filter: drop-shadow(0 0.5rem 2rem rgb(255, 255, 255));
+
                 }
+            }
+
+            @media only screen and (max-width: 1026px) {
+                .gif {
+                    display: none;
+                }
+            }
+
+            .gif{
+                object-fit: cover;
+                width: 34rem !important; 
+                height: 24rem !important;
+                margin-top: 4.5rem;
             }
         </style>
     </head>
     <body>
-        <div style="z-index: 999; position: fixed; height: 2%; background-color: black; padding: 1% 1% 1% 1%;">
+        <div style="z-index: 999; position: fixed; height: 2%; background-color: black; padding: 0.9rem 0.9rem 0.9rem 0.9rem;">
             <p style="color: white;">
                 <a href="index.html" style="color: white;">Home</a>
                 <span style="color:black; user-select: none;">__</span>
-                <a href="index.html" style="color: white;">Clients</a>
+                <a href="javascript:window.alert('Coming soon.');" style="color: white;">Clients</a>
                 <span style="color:black; user-select: none;">__</span>
-                <a href="index.html" style="color: white;">Contact</a>
+                <a href="javascript:window.alert('Coming soon.');" style="color: white;">Contact</a>
                 <span style="color:black; user-select: none;">__</span>
-                <a href="index.html" style="color: white;">Pricing</a>
+                <a href="javascript:window.alert('Coming soon.');" style="color: white;">Pricing</a>
             </p>
         </div>
     
@@ -161,36 +181,64 @@
             </div>
         </div>
         <div id="display_one"></div>
-        <br><br><br><br>
+        <br>
         
         <div style="background-color: white" class="padded_div">
-            <br><br><br>
+            <br><br>
+
             <div class="flex-container">
-                <div style="width: 47rem; padding-left: 1rem; padding-right: 1rem;">
+                <div style="width: 47rem; padding-left: 2rem; padding-right: 5rem;">
                     <p style="margin-top: 9rem;">
-                        <span style="font-size: 300%; line-height: 120%;">You're reading a nice and slick <span style="color: grey;">heading</span>, right now.</span><br>
-                        <span style="font-size: 120%;">You don't need to pay thousands for a beautiful website. Contact us at sales@greybird.group and we can give you a quote over email.</span>
+                        <span style="font-size: 300%; line-height: 120%;">Good looking websites shouldn't cost a fortune, our sites start from <span style="color: grey;">£150</span>.<sup><span style="font-size: 1rem;">&dagger;1</span></sup></span><br>
+                        <span style="font-size: 120%;">We don't tack on any unnecessary bloat or costs to your sites, our sleek and neat sites only require what's needed. We keep our costs low so yours stay low too.</span>
                     </p>
                 </div>
                 
-                <img src="unique_assets/images/core/placeholder_512x512.png" style="width: 34rem;">
+                <img src="https://i.giphy.com/media/3o7aTFWIdZi4kRVijm/giphy.webp" style="width: 34rem; height: 34rem;  filter: grayscale() brightness(1.25);" class="gif">
             </div>
             
 
             <br><br><br><br>
-            <br><br><br><br>
-            <br><br><br><br>
+
             <div class="flex-container" style="flex-direction: row-reverse;">
-                <div style="width: 47rem; padding-left: 1rem; padding-right: 1rem;">
+                <div style="width: 47rem; padding-left: 5rem; padding-right: 1rem;">
                     <p style="margin-top: 9rem;">
-                        <span style="font-size: 300%; line-height: 120%;">You're reading a nice test <span style="color: grey;">heading</span>, right now.</span><br>
-                        <span style="font-size: 120%;">You don't need to pay thousands for a beautiful website. Contact us at sales@greybird.group and we can give you a quote over email.</span>
+                        <span style="font-size: 300%; line-height: 120%;">Ran by experienced Yorkshire web developers <span style="color: grey;">with personality</span>.</span><br>
+                        <span style="font-size: 120%;">GreyBird is owned and ran by software engineers, born and educated in Leeds. We love to chat and form real friendships with out clients. Talk to us today over email.</span>
                     </p>
                 </div>
                 
-                <img src="unique_assets/images/core/placeholder_512x512.png" style="width: 34rem;">
+                <img src="https://i.giphy.com/media/UcK7JalnjCz0k/giphy.webp" style="width: 34rem; height: 34rem; filter: grayscale()brightness(0.8);" class="gif">
             </div>
+
             <br><br><br><br>
+
+            <div class="flex-container">
+                <div style="width: 47rem; padding-left: 2rem; padding-right: 5rem;">
+                    <p style="margin-top: 9rem;">
+                        <span style="font-size: 280%; line-height: 120%;">Professional engineers educated at the<span style="color: grey;"> University of Leeds</span>.</span><br>
+                        <span style="font-size: 120%;">You and your business are in safe hands with helpful software engineers educated and trained at the University of Leeds. With years of experience ontop of their education.</span>    
+                    </p>
+                </div>
+                
+                <img src="https://i.giphy.com/media/RNEoZG3sBfUUFAbOco/giphy.webp" style=" height: 34rem; width: 34rem; filter: grayscale()brightness(0.8);" class="gif">
+            </div>
+            
+            <br><br><br><br>
+        </div>
+
+        
+        <div style="z-index: 999; position: fixed; height: 2%; background-color: black; padding: 0.9rem 0.9rem 0.9rem 0.9rem;">
+            <p style="color: white; font-size: 0.8rem; line-height: 0.01rem;">
+                &dagger;1 Pricing may include monthly costs for upkeep of extra services such as custom domain emails.
+            </p>
+            <p style="color: white; font-size: 0.95rem;">
+                <a href="index.html" style="color: white;">Terms & Conditions</a>
+                <span style="color:black; user-select: none;">__</span>
+                <a href="index.html" style="color: white;">Privacy</a>
+                <span style="color:black; user-select: none;">__</span>
+                &copy; 2022 - 2023 GreyBird Group, Leeds, Great Britain.
+            </p>
         </div>
         
         <script>
