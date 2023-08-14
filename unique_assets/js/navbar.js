@@ -8,37 +8,29 @@ if(filename.length < 2){
 
 var writeDOM = `
 
-<header data-bs-theme="dark">
-    <nav class="navbar navbar-expand-md fixed-top" style="background-color: rgb(240, 240, 240);">
-        <div class="container-fluid">
-            <a href="index.html"><img src="/unique_assets/images/site_media/site_logo.png" style="height: 40px; margin-right: 25px;"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse" style="margin-bottom: 5px;">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    <li class="nav-item">
-                    <a class="nav-link [active page insert index.html]" aria-current="page" href="index.html" style="color: black;">Home</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link [active page insert clients.html]" aria-current="page" href="clients.html" style="color: black;">Our clients</a>
-                    </li>
-                </ul>
-            </div>
-            <div style="margin-right : 0px;">
-                <p style="text-align:left;">[visNum]</p>
-            </div>
-        </div>
-    </nav>
-</header>
+    <div style="z-index: 999; position: fixed; height: 2%; background-color: black; padding: 0.9rem 0.9rem 0.9rem 0.9rem;">
+        <p style="color: white;">
+            <a href="index.html" style="color: white;">Home</a>
+            <span style="color:black; user-select: none;">__</span>
+            <a href="javascript:window.alert('Coming soon.');" style="color: white;">Clients</a>
+            <span style="color:black; user-select: none;">__</span>
+            <a href="javascript:window.alert('Coming soon.');" style="color: white;">Contact</a>
+            <span style="color:black; user-select: none;">__</span>
+            <a href="javascript:window.alert('Coming soon.');" style="color: white;">Pricing</a>
+        </p>
+    </div>
 
 `;
+
+/*
 
 writeDOM = writeDOM.replace("[active page insert " + filename + "]", "active_navbar");
 writeDOM = writeDOM.replace("[active page insert index.html]", "");
 writeDOM = writeDOM.replace("[active page insert clients.html]", "");
 
 writeDOM = writeDOM.replace("[visNum]", "");
+
+*/
 
 /*
 try{
@@ -58,6 +50,6 @@ catch{
     writeDOM = writeDOM.replace("[visNum]", "");
 }
 */
-console.log(writeDOM);
+//console.log(writeDOM);
 
 document.write(writeDOM);
