@@ -8,7 +8,7 @@ if(filename.length < 2){
 
 var writeDOM = `
 
-    <div style="z-index: 999; position: fixed; height: 2%; background-color: black; padding: 0.9rem 0.9rem 0.9rem 0.9rem;">
+    <div style="z-index: 999; position: fixed; height: 3rem; width : 100%; background-color: black; padding: 0.9rem 0.9rem 0.9rem 0.9rem;">
         <p style="color: white;">
             <a href="index.html" style="color: white;">Home</a>
             <span style="color:black; user-select: none;">__</span>
