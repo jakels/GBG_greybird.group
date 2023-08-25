@@ -8,14 +8,14 @@ if(filename.length < 2){
 
 var writeDOM = `
 
-    <div style="z-index: 999; position: fixed; height: 3rem; width : 100%; background-color: black; padding: 0.9rem 0.9rem 0.9rem 0.9rem;">
+    <div style="z-index: 999; position: fixed; height: 3rem; width : 100%; background-color: rgba(0 0 0 0); padding: 0.9rem 0.9rem 0.9rem 0.9rem;">
         <p style="color: white;">
             <a href="index.html" style="color: white;">Home</a>
-            <span style="color:black; user-select: none;">__</span>
+            <span style="color: white; opacity:0; user-select: none;">__</span>
             <a href="javascript:window.alert('Coming soon.');" style="color: white;">Clients</a>
-            <span style="color:black; user-select: none;">__</span>
+            <span style="color: white; opacity:0; user-select: none;">__</span>
             <a href="javascript:window.alert('Coming soon.');" style="color: white;">Contact</a>
-            <span style="color:black; user-select: none;">__</span>
+            <span style="color: white; opacity:0; user-select: none;">__</span>
             <a href="javascript:window.alert('Coming soon.');" style="color: white;">Pricing</a>
         </p>
     </div>
