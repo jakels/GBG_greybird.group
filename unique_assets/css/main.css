@@ -139,3 +139,17 @@ body {
     height: 24rem !important;
     margin-top: 4.5rem;
 }
+
+.accent_colour{
+    background: -webkit-linear-gradient(#2a305a, #685174);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.accent_colour_not_text{
+    background-image: conic-gradient(black, #240b31, black);
+}
+
+.both_shadow_accent{
+    filter: drop-shadow(0 0.5rem 2rem crimson) drop-shadow(0 -0.5rem 2rem crimson);
+}
