@@ -154,3 +154,11 @@ body {
 .both_shadow_accent{
     filter: drop-shadow(0 0.5rem 2rem crimson) drop-shadow(0 -0.5rem 2rem crimson);
 }
+
+.navbar_top{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.navbar_scrolled{
+    background-color: rgba(0, 0, 0, 1);
+}

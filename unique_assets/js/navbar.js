@@ -8,7 +8,7 @@ if(filename.length < 2){
 
 var writeDOM = `
 
-    <div style="z-index: 999; position: fixed; height: 3rem; width : 100%; background-color: rgba(0 0 0 0); padding: 0.9rem 0.9rem 0.9rem 0.9rem;">
+    <div style="z-index: 999; position: fixed; height: 3rem; width : 100%; padding: 0.9rem 0.9rem 0.9rem 0.9rem;" id = "top_navbar" class="navbar_top">
         <p style="color: white;">
             <a href="index.html" style="color: white;">Home</a>
             <span style="color: white; opacity:0; user-select: none;">__</span>
@@ -51,5 +51,17 @@ catch{
 }
 */
 //console.log(writeDOM);
+
+
+function changeCss () {
+  var bodyElement = document.querySelector("body");
+  var navElement = document.getElementById("top_navbar");
+  if (this.scrollY > 10){
+    navElement.classList.replace("navbar_top", "navbar_scrolled");
+  }else{
+    navElement.classList.replace("navbar_scrolled", "navbar_top");
+  }
+}
+window.addEventListener("scroll", changeCss , false);
 
 document.write(writeDOM);
