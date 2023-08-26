@@ -143,6 +143,7 @@ body {
 .accent_colour{
     background: -webkit-linear-gradient(#2a305a, #685174);
     background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
